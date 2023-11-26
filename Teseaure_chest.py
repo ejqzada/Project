@@ -22,25 +22,22 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
-left_Rigth =str(input("left or right?: " ))
-left_Rigth.lower()
 
-swim_wait = str(input("swim or wait: "))
-swim_wait.lower()
+left_Rigth1 =str(input("Do you want to go right or left?:\n" )).lower()
 
-witch_color = str(input("Which door, Blue, Red, Yellow: "))
-witch_color.lower()
-
-if left_Rigth == "left":
-    if swim_wait =="swim":
-        print("Attacked by sharp. Game Over.!! ... Press continue")
-    elif witch_color == "yellow":
-        print("You Win!!")
-    elif witch_color =="red":
-        print("Burned by fire, you have become ashes.Game over.!! ... Press continue")
-    elif witch_color =="blue":
-        print("Eaten by beasts. Game over.!! ... Press continue")
+if left_Rigth1 == "left":
+    swim_wait2 = str(input('You\' have 2 way to swim around the lake or wait for a raft. Please indicate whether to "swim" or "wait".\n')).lower()
+    if swim_wait2 =="wait":
+        witch_color3 = str(input('On\' the island there are 3 chests of different colors: red, blue and yellow. Does it indicate the color of the chest to try to open it? or ask for help to open them?:\n')).lower()
+        if witch_color3 == "yellow":
+            print("You Win!!")
+        elif witch_color3 =="red":
+            print("The red chest exploded when I opened it, you have become ashes. Game over.!! ... Press continue")
+        elif witch_color3 =="blue":
+            print("You have opened Pandora's box and it is the end of the world. Game over.!! ... Press continue")
+        else:
+            print("Your treasures have been stolen and you were buried alive. Game over.!! ... Press continue")
     else:
-        print("Game over, your saved game will be deleted!!")
+        print("Attacked by lake monsters. Game Over.!! ... Press continue")
 else:
     print("You have fallen into a spiked hole. Game over.!! ... Press continue")
